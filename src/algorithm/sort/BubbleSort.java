@@ -3,6 +3,7 @@ package algorithm.sort;
 import java.util.Arrays;
 
 /**
+ * 冒泡排序 N*N
  *
  *@author JH-Wang
  *@since 2024/7/24 0:15

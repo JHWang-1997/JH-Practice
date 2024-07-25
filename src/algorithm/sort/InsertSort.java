@@ -3,6 +3,7 @@ package algorithm.sort;
 import java.util.Arrays;
 
 /**
+ * 插入排序 N*N
  *
  *@author JH-Wang
  *@since 2024/7/23 0:13
