@@ -1,9 +1,6 @@
 package algorithm.tree;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
+import java.util.*;
 
 /**
  *
@@ -14,8 +11,24 @@ public class PostOrder {
 
     // 非递归版
     public List<Integer> postOrder(TreeNode root) {
-        // TODO
-        return null;
+        List<Integer> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            list.add(node.val);
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+        }
+        Collections.reverse(list);
+        return list;
     }
 
     public List<Integer> postOrderRecursion(TreeNode root) {
